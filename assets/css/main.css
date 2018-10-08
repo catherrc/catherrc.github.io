@@ -1885,7 +1885,13 @@
 			}
 
 			.main.style3.secondary {
-				background: #f5f6f7;
+				
+				  background-image: url("/../../images/art style 2 cover.png");
+				background-
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+			
+				background-size:cover;
 			}
 
 		.main.dark {
