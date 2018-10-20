@@ -16,7 +16,42 @@
 		
 	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		
+	<style>
+* {
+    box-sizing: border-box;
+}
+
+.header {
+    text-align: center;
+    padding: 32px;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+.column img { width: 200px; /* You can set the dimensions to whatever you want */
+    height: 200px;
+    object-fit: cover;
+
+    margin-top: 12px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+	.column	video { width: 200px; /* You can set the dimensions to whatever you want */
+    height: 200px;
+    object-fit: cover;
+ margin-top: 12px;
+} 
+</style>
 </head>
 	<body>
 
@@ -81,42 +116,33 @@
 					<header>
 						<h2>My Work</h2>
 					</header>
-			<div>
-						
-				<div style="float: left; width: 48%; margin-right: 1%; margin-bottom: 0.5em;">
-					 
-                       <video style="float: ; width: 95%; margin-right: 1%; margin-bottom: 0.5em;" width="400" muted="muted" autoplay="autoplay" loop="loop" >
-                          <source src="images/GameDesign/Hacker_GameDesign/hacker_homepage.mp4" type="video/mp4">
-                       </video>
-						<ul class="actions">
-						  <li><a href="gamedev.html" class="button style2"><h2></h2>Game Design</a></li>
-				       </ul>
-						
-						</div>
-				
-						<div  style="float: left; width: 48%; margin-right: 1%; margin-bottom: 0.5em;">
-					   <img src="images/Story/Vanna Banana/title1_994.jpg" style="float: ; width: 95%; margin-right: 0%; margin-bottom: 0.5em;" width="400" height="231" alt=""/>
-						 <ul class="actions">
-				  		   <li><a href="storydev.html" class="button style2"><h2></h2>Story</a></li>
-						</ul>
-						</div>
-				<div style="float: left; width: 48%; margin-right: 1%; margin-bottom: 0.5em;">
-					 <img src="images/Art_and_Illustration/FullSizeRender.jpg" style="float: ; width: 95%; margin-right: 0%; margin-bottom: 0.5em;" height="225" alt=""/>
-						<ul class="actions">
-						  <li><a href="artillustration.html" class="button style2"><h2></h2>Art and Illustration</a></li>
-				       </ul>
-					
-						</div>
-				
-					   <div style="float: left; width: 48%; margin-right: 1%; margin-bottom: 0.5em;">
-					    <img src="images/Animation/kenny_scene1_color-small_1.gif" style="float: center; width: 95%; margin-right: 0%; margin-bottom: 0.5em;" height="225" alt=""/>
-					 <ul class="actions">
-					   <li><a href="animation.html" class="button style2"><h2></h2>Animation</a></li>
-					 </ul>
-					   </div>
-					 </div>
+			<div class="row"> 
+  <div class="column">
+     <video muted="muted" autoplay="autoplay" loop="loop">
+       <source src="images/GameDesign/Hacker_GameDesign/hacker_homepage 2.mp4" style="width:100%" type="video/mp4">
+     </video>
+     <ul class="actions">
+	      <li><a href="gamedev.html" class="button style2"><h2></h2>Game Design</a></li>
+	    </ul>
+  
+    <img src="/images/Art_and_Illustration/2017_10.jpg" style="width:100%" alt="">
+     <ul class="actions">
+	      <li><a href="artillustration.html" class="button style2"><h2></h2>Art and Illustration</a></li>
+	    </ul>
+  </div>
+  <div class="column">
+    <img src="/images/Story/Vanna Banana/title1_994.jpg" style="width:100%" alt="">
+     <ul class="actions">
+	      <li><a href="storydev.html" class="button style2"><h2></h2>Story</a></li>
+	    </ul>
+  
+    <img src="/images/Animation/kenny_scene1_color-small_1.gif" style="width:100%" alt="">
+     <ul class="actions">
+	      <li><a href="animation.html" class="button style2"><h2></h2>Animation</a></li>
+	    </ul>
+  </div>
+</div>
 				 </div>
-		    
 			</section>
 
 		<!-- Contact -->
