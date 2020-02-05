@@ -1,237 +1,122 @@
-/*
-	Big Picture by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
-(function($) {
-
-	skel.breakpoints({
-		xxlarge: '(max-width: 1920px)',
-		xlarge: '(max-width: 1680px)',
-		large: '(max-width: 1280px)',
-		medium: '(max-width: 1000px)',
-		small: '(max-width: 736px)',
-		xsmall: '(max-width: 480px)',
-	});
-
-	$(function() {
-
-		var	$window = $(window),
-			$body = $('body'),
-			$header = $('#header'),
-			$all = $body.add($header);
-
-		// Disable animations/transitions until the page has loaded.
-			$body.addClass('is-loading');
-
-			$window.on('load', function() {
-				window.setTimeout(function() {
-					$body.removeClass('is-loading');
-				}, 0);
-			});
-
-		// Touch mode.
-			skel.on('change', function() {
-
-				if (skel.vars.mobile || skel.breakpoint('small').active)
-					$body.addClass('is-touch');
-				else
-					$body.removeClass('is-touch');
-
-			});
-
-		// Fix: Placeholder polyfill.
-			$('form').placeholder();
-
-		// Fix: IE flexbox fix.
-			if (skel.vars.IEVersion <= 11
-			&&	skel.vars.IEVersion >= 10) {
-
-				var $main = $('.main.fullscreen'),
-					IEResizeTimeout;
-
-				$window
-					.on('resize.ie-flexbox-fix', function() {
-
-						clearTimeout(IEResizeTimeout);
-
-						IEResizeTimeout = setTimeout(function() {
-
-							var wh = $window.height();
-
-							$main.each(function() {
-
-								var $this = $(this);
-
-								$this.css('height', '');
-
-								if ($this.height() <= wh)
-									$this.css('height', (wh - 50) + 'px');
-
-							});
-
-						});
-
-					})
-					.triggerHandler('resize.ie-flexbox-fix');
-
+console.clear();
+$(function(){	
+  var menu = document.getElementById('menuBox');
+  var bar1 = document.querySelector('.bar1');
+  var bar2 = document.querySelector('.bar2');
+  var bar3 = document.querySelector('.bar3');
+  var isChangingState = false;
+  var isOpen = false;
+  var menuTL = new TimelineMax();
+	
+	function menuOver() {			
+		if(!isChangingState) {
+			menuTL.clear();
+			if(!isOpen) {
+				menuTL 
+            .to(bar1, 0.35, { x:12, ease:Power1.easeOut}, "one")
+			.to(bar3, 0.35, { x:-16, ease:Power1.easeOut}, "one");
 			}
-
-		// Prioritize "important" elements on small.
-			skel.on('+small -small', function() {
-				$.prioritize(
-					'.important\\28 small\\29',
-					skel.breakpoint('small').active
-				);
-			});
-
-		// Gallery.
-			$window.on('load', function() {
-
-				var $gallery = $('.gallery');
-
-				$gallery.poptrox({
-					baseZIndex: 10001,
-					useBodyOverflow: false,
-					usePopupEasyClose: false,
-					overlayColor: '#1f2328',
-					overlayOpacity: 0.65,
-					usePopupDefaultStyling: false,
-					usePopupCaption: true,
-					popupLoaderText: '',
-					windowMargin: 50,
-					usePopupNav: true
-				});
-
-				// Hack: Adjust margins when 'small' activates.
-					skel
-						.on('-small', function() {
-							$gallery.each(function() {
-								$(this)[0]._poptrox.windowMargin = 50;
-							});
-						})
-						.on('+small', function() {
-							$gallery.each(function() {
-								$(this)[0]._poptrox.windowMargin = 5;
-							});
-						});
-
-			});
-
-		// Section transitions.
-			if (skel.canUse('transition')) {
-
-				var on = function() {
-
-					// Galleries.
-						$('.gallery')
-							.scrollex({
-								top:		'30vh',
-								bottom:		'30vh',
-								delay:		50,
-								initialize:	function() { $(this).addClass('inactive'); },
-								terminate:	function() { $(this).removeClass('inactive'); },
-								enter:		function() { $(this).removeClass('inactive'); },
-								leave:		function() { $(this).addClass('inactive'); }
-							});
-
-					// Generic sections.
-						$('.main.style1')
-							.scrollex({
-								mode:		'middle',
-								delay:		100,
-								initialize:	function() { $(this).addClass('inactive'); },
-								terminate:	function() { $(this).removeClass('inactive'); },
-								enter:		function() { $(this).removeClass('inactive'); },
-								leave:		function() { $(this).addClass('inactive'); }
-							});
-
-						$('.main.style2')
-							.scrollex({
-								mode:		'middle',
-								delay:		100,
-								initialize:	function() { $(this).addClass('inactive'); },
-								terminate:	function() { $(this).removeClass('inactive'); },
-								enter:		function() { $(this).removeClass('inactive'); },
-								leave:		function() { $(this).addClass('inactive'); }
-							});
-
-					// Contact.
-						$('#contact')
-							.scrollex({
-								top:		'50%',
-								delay:		50,
-								initialize:	function() { $(this).addClass('inactive'); },
-								terminate:	function() { $(this).removeClass('inactive'); },
-								enter:		function() { $(this).removeClass('inactive'); },
-								leave:		function() { $(this).addClass('inactive'); }
-							});
-
-				};
-
-				var off = function() {
-
-					// Galleries.
-						$('.gallery')
-							.unscrollex();
-
-					// Generic sections.
-						$('.main.style1')
-							.unscrollex();
-
-						$('.main.style2')
-							.unscrollex();
-
-					// Contact.
-						$('#contact')
-							.unscrollex();
-
-				};
-
-				skel.on('change', function() {
-
-					if (skel.breakpoint('small').active)
-						(off)();
-					else
-						(on)();
-
-				});
-
+		}
+	}	
+	function menuOut() {
+		if(!isChangingState) {
+			menuTL.clear();
+			if(!isOpen) { 
+				menuTL
+            .to(bar1, 0.35, { x:0, ease:Power1.easeOut}, "one")
+			.to(bar3, 0.35, { x:0, ease:Power1.easeOut}, "one");
 			}
+		}
+	}
+	function showCloseMenu() {
+		    menuTL.clear();
+		    menuTL
+			.to(bar1, 0.4, { backgroundColor: 000000, x:6, y:6.5, rotation: 225,  transformOrigin:'50% 50%'}, "close")
+			.to(bar2, 0.4, { backgroundColor: 000000,x:0, rotation: 135}, "close")
+			.to(bar3, 0.4, { backgroundColor: 000000, x:-9.7, y:-5.3, rotation: 225, transformOrigin:'50% 50%', onComplete: function() { isChangingState = false; isOpen = true; }}, "close");
+	}		
+	function showOpenMenu() {
+		    menuTL.clear();
+		    menuTL
+             .to(bar2, 0.5, { backgroundColor: 14327869, rotation: 0})
+             .to(bar3, 0.5, { backgroundColor: 14327869, x:-16, y:0, rotation: 0, onComplete: function() { isChangingState = false; isOpen = false;}, delay:-0.5 })
+			 .to(bar1, 0.5, { backgroundColor: 14327869, x:12, y:0, rotation: 0, delay: -0.5});
+	}  	
+  menu.onmouseover = function(){
+    menuOver();
+  };
+  menu.onmouseout = function(){
+    menuOut();
+  };    
+  menu.onclick = function(){
+ 		if(!isChangingState) {
+			isChangingState = true;	
+			if(!isOpen) {
+				showCloseMenu();			
+			}
+			else {
+				showOpenMenu();				
+			}	
+        }   
+  };
+});
 
-		// Events.
-			var resizeTimeout, resizeScrollTimeout;
+console.clear();
+var menuAnimation = new TimelineMax({paused:true});
+var menuAnimationBack = new TimelineMax({paused:true});
+var navMain = document.getElementById("nav-main");
+var menuButton = document.getElementById("menu-button");
+var toggle = true;
+ 
+menuAnimation
+  .set($('nav'), {css:{zIndex:1}}) // set is basically a 0-second duration tween
+  .to(navMain, .8, {width: "100%", className : "+=reveal", ease: Power2.easeInOut, transform: "translate3d(0,0,0)"},0)
+ 
+menuAnimationBack
+  .to(navMain, .6, {width: 0, className : "+=back", ease: Power4.easeIn, transform: "translate3d(0,0,0)"},0)
+  .set($('nav'), {css:{zIndex:-1}}) // set is basically a 0-second duration tween
 
-			$window
-				.resize(function() {
+menuButton.onclick = function() {
 
-					// Disable animations/transitions.
-						$body.addClass('is-resizing');
+  toggle = !toggle;
+  toggle == false ? menuAnimation.play(0) : menuAnimationBack.play(0);
+};
 
-					window.clearTimeout(resizeTimeout);
 
-					resizeTimeout = window.setTimeout(function() {
 
-						// Update scrolly links.
-							$('a[href^="#"]').scrolly({
-								speed: 1500,
-								offset: $header.outerHeight() - 1
-							});
+//Used for the Skills bar
+$('.skills dd').each(function() {
+    $(this).css({
+      width: $(this).text() + '%'
+    });
+  });
+  
+// matchHeight.js
+$(function() {
+    $('.matchHeight').matchHeight();
+});
 
-						// Re-enable animations/transitions.
-							window.setTimeout(function() {
-								$body.removeClass('is-resizing');
-								$window.trigger('scroll');
-							}, 0);
 
-					}, 100);
+//lightbox
 
-				})
-				.load(function() {
-					$window.trigger('resize');
-				});
+const lightbox = document.createElement('div')
+lightbox.id = 'lightbox'
+document.body.appendChild(lightbox)
 
-	});
+const images = document.querySelectorAll('img')
+images.forEach(image => {
+	image.addEventListener('click', e => {
+		lightbox.classList.add('active')
+		const img = document.createElement('img')
+		img.src = image.src
+		while (lightbox.firstChild) {
+			lightbox.removeChild(lightbox.firstChild)
+		}
+		img.src.appendChild(img)
+	})
+})
 
-})(jQuery);
+lightbox.addEventListener('click', e => {
+	if (e.target !== e.currentTarget) return
+	lightbox.classList.remove('active')
+})

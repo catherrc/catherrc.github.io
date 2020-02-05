@@ -1999,7 +1999,7 @@
 /* Footer */
 
 	#footer {
-		position: relative;
+		position: absolute;
 		height: 5em;
 		line-height: 5em;
 		margin: 0;
@@ -2194,3 +2194,16 @@
 			}
 
 		}
+
+.introduction-blurb {
+	display: table; 
+	text-align: center;
+	width: 100%;
+	max-width: 400px;
+	height: auto;
+	position: relative;
+	padding: 1em;
+	margin: auto;
+	background: rgba(255,255,255,0.36)
+	
+}

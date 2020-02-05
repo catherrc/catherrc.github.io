@@ -1,211 +1,49 @@
-<!DOCTYPE HTML>
-<!--
-	Big Picture by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-		<title>Catherine Rock Chen portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link href="../stratacssandjs/stratamain.css" rel="alternate stylesheet" type="text/css">
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		
-		
-	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-	<style>
-
-
-
-.row {
-    margin: 10px -16px;
-}
-
-/* Add padding BETWEEN each column */
-.row,
-.row > .column {
-    padding: 8px;
-}
-
-/* Create three equal columns that floats next to each other */
-.column {
-    float: left;
-    width: 49%;
-    display: none; /* Hide all elements by default */
-}
-
-/* Clear floats after rows */ 
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-/* The "show" class is added to the filtered elements */
-.show {
-  display: block;
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/scss/main.css"> 
+    <title>Document</title>
 </head>
-	<body>
+<body>
 
-		<!-- Header -->
-			<header id="header">
-				<h1><a href="index.html">Catherine Rock Chen</a></h1>
-				<nav>
-					<ul>
-                        <li><a href="gamedev.html"><b>Games</b></a></li>
-						<li><a href="snowbirds.html"><strong>Writing</strong></a></li>
-                        <li><a href="storydev.html"><b>Animation</b></a></li>
-                        <li><a href="boards.html"><b>Boards</b></a></li>
-					    <li><a href="#contact">Contact</a></li>
-					</ul>
-				</nav>
-			</header>
+    <nav id="nav-main" class="hidden">
+        <section>
+          <a href="index.html">Home</a>
+          <a href="story.html">Story Development</a>
+          <a href="#">Production</a>
+          <a href="about.html">About</a>
+          <a href="mailto:catherrc@usc.edu">Contact</a>
+        </section>
+    </nav>
+      
+    <button id="menu-button" class="menu-button">
+        <div class="menu-bars" id="menuBox">
+            <span class="bar1"></span>
+            <span class="bar2"></span>
+            <span class="bar3"></span>
+        </div>
+    </button>
 
-		<!-- Intro -->
-			<section id="intro" class="main style1 fullscreen">
-				<div class="content">
-				  <header>
-				    <h2>Catherine Chen</h2>
-				  </header>
-				  <p>I am a <strong>Narrative Designer</strong> and <strong>Story Artist.</strong>.</p>
-					<p>I create projects from paper to <strong>development</strong></p>
-					<p>I am looking for <strong>internships</strong>. </p>
-					<footer>
-						<a href="#one" class="button style2 down">More</a>
-					</footer>
-				</div>
-			</section>
-
-		<!-- One -->
-		<!---
-			<section id="three" class="main style2 right dark fullscreen"> <a href="#two" class="button style2 down anchored">Next</a>
-			</section>
-		--->
-
-		<!-- Two -->
-		<!---
-			<section id="two" class="main style2 left dark fullscreen">
-				
-				<a href="#work" class="button style2 down anchored">Next</a>
-			</section>
---->
-		<!-- Work -->
-			<section id="work" class="main style3 primary">
-				<div class="content">
-					<header>
-						<h2>Who I Am </h2>
-					</header>
-					<a href="StoryArt_Resume_Spring2019 (3).pdf"><b>Here is my Resume</b></a>
-					
-					<div class="content box style2">
-					  <p> Studying at USC's School of Cinematic Art's Animation Program, I am directing <em>Domain</em> (2019), a mobile game at USC Games. I am also starting an animation project for thesis.
-					    
-					    I enjoy writing, ideating, and pitching projects. 
-					    
-					    My goal is to create refreshing narratives based on personal experiences. Curious about new tools and opportunities, I want to learn more about the story development process in the animation and games industry. Fearless, I will do whatever the team needs me to do.
-					    
-					    I am looking for internships, contracts, and jobs! If you are interested in me, please contact me at catherrc@usc.edu. </p>
-				  <p></div>
-					
-				</div>
-			</section>
-
-		<!-- Contact -->
-			<section id="contact" class="main style3 secondary">
-				<div class="content">
-					<header>
-						<h2>Contact</h2>
-						<p><strong>If you are looking for someone who is passionate, reliable, and efficient, that’s me! I am currently looking for a summer internship or job.</strong> I will respond within 12 hours.  </p>
-					</header>
-					<div class="box">
-						<form method="post" action="mailto:catherrc@usc.edu">
-							<div class="field half first"><input type="text" name="name" placeholder="Name" /></div>
-							<div class="field half"><input type="email" name="email" placeholder="Email" /></div>
-							<div class="field"><textarea name="message" placeholder="Message" rows="6"></textarea></div>
-							<ul class="actions">
-								<li><input type="submit" value="Send Message" /></li>
-							</ul>
-						</form>
-					</div>
-				</div>
-			</section>
-
-		<!-- Footer -->
-			<footer id="footer">
-
-				<!-- Icons -->
-					<ul class="actions">
-						<li><a href="https://twitter.com/Catrockchen" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="https://www.facebook.com/carnationfox" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-						<li><a href="https://www.instagram.com/catr.art/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-					</ul>
-
-				<!-- Menu -->
-					<ul class="menu">
-						<li>&copy; Catherine Rock Chen</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-					</ul>
-
-			</footer>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
-		<script>
-filterSelection("all")
-function filterSelection(c) {
-  var x, i;
-  x = document.getElementsByClassName("column");
-  if (c == "all") c = "";
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-  }
-}
-
-function w3AddClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-  }
-}
-
-function w3RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);     
-    }
-  }
-  element.className = arr1.join(" ");
-}
+    <div class="main">
+        <div id="content">
+          <div class="title">
+            <span><a href="#">Catherine Chen</a></span>
+          </div>
+          <div>
+              <hr class="one">
+          </div>
+          <p><a href="#">Story Development</a></p>
+          <p><a href="#">Producer</a></p>
+        </div>
+      </div>
 
 
-// Add active class to the current button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function(){
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
-</script>
-
-	</body>
+<!--Scripts-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/b8619ce40f.js" crossorigin="anonymous"></script>
+    <script src="assets/js/main.js"></script>
+</body>
 </html>
