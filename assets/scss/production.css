@@ -205,7 +205,9 @@ hr.intro {
       grid-template-columns: repeat(8, 1fr);
   grid-gap: 10px;
   grid-auto-rows: auto;
-      grid-template-areas: "box3 box3 box3 box3 box3 box3 box3 box3" "box2 box2 box2 box1 box1 box1 box1 box1" "box2 box2 box2 box1 box1 box1 box1 box1";
+      grid-template-areas: "box3 box3 box3 box3 box3 box3 box3 box3"
+ "box2 box2 box2 box1 box1 box1 box1 box1"
+ "box2 box2 box2 box1 box1 box1 box1 box1";
 }
 
 .grid12 {
@@ -217,7 +219,9 @@ hr.intro {
       grid-template-columns: repeat(8, 1fr);
   grid-gap: 10px;
   grid-auto-rows: auto;
-      grid-template-areas: "box3 box3 box3 box3 box3 box3 box3 box3" "box2 box2 box2 box7 box7 box7 box7 box7" "box2 box2 box2 box7 box7 box7 box7 box7";
+      grid-template-areas: "box3 box3 box3 box3 box3 box3 box3 box3"
+ "box2 box2 box2 box7 box7 box7 box7 box7"
+ "box2 box2 box2 box7 box7 box7 box7 box7";
 }
 
 .grid2 {
@@ -229,7 +233,9 @@ hr.intro {
       grid-template-columns: repeat(8, 1fr);
   grid-gap: 10px;
   grid-auto-rows: auto;
-      grid-template-areas: "box3 box3 box3 box3 box3 box3 box3 box3" "box5 box5 box5 box5 box5 box4 box4 box4" "box5 box5 box5 box5 box5 box4 box4 box4";
+      grid-template-areas: "box3 box3 box3 box3 box3 box3 box3 box3"
+ "box5 box5 box5 box5 box5 box4 box4 box4"
+ "box5 box5 box5 box5 box5 box4 box4 box4";
 }
 
 .box1 {
@@ -414,7 +420,7 @@ hr.intro {
 
 ul {
   list-style-type: square;
-  font-size: 1.4em;
+  font-size: 1.1em;
   margin: 2em 2em 0em 0em;
 }
 
