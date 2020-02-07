@@ -419,14 +419,14 @@ section:last-child {
   font-family: "Open Sans", sans-serif;
   font-style: italic;
   font-size: 1.5em;
-  color: #DAA03DFF;
+  color: white;
 }
 
 .sectionContent h2 {
   font-family: "Open Sans", sans-serif;
   font-size: 1.5em;
   margin-bottom: -2px;
-  color: #DAA03DFF;
+  color: white;
 }
 
 .sectionContent h3 {
