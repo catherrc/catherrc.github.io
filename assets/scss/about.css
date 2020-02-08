@@ -315,9 +315,10 @@ p {
 
 #cv {
   width: 100%;
-  max-width: 1100px;
+  max-width: 900px;
   background: black;
-  margin: 30px auto;
+  margin: 50px auto;
+  box-shadow: 0px 0px 50px 5px rgb(40,40,50);
 }
 
 .mainDetails {
@@ -335,8 +336,9 @@ p {
 }
 
 #name h2 {
-  font-size: 2em;
+  font-size: 1.4em;
   margin-left: 2px;
+	line-height: 0px;
   font-family: "Open Sans", sans-serif;
   color: #DAA03DFF;
 }
@@ -360,6 +362,7 @@ p {
 
 #name {
   float: left;
+	margin-top: 1em;
 }
 
 #contactDetails {
@@ -624,4 +627,6 @@ section:last-child {
   -webkit-animation-delay: 0, 2.5s;
   animation-delay: 0, 2.5s;
 }
+
+
 /*# sourceMappingURL=about.css.map */
