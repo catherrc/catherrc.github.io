@@ -262,6 +262,9 @@ nav a:hover:after {
   font-size: .9em;
   display: block;
 }
+video[poster] {
+	object-fit: fill;
+}
 
 @media (max-width: 995px) {
   .item2 h1 {
