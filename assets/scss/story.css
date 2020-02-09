@@ -305,6 +305,22 @@ nav a:hover:after {
 }
 
 @media (max-width: 600px) {
+	.section-header {
+  text-align: center;
+  margin: 60px auto 20px auto;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #DAA03DFF;
+}
+
+.section-header-underline {
+  border: 1px solid #DAA03DFF;
+  width: 3rem;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
   .wrappermain {
     max-width: 100%;
     margin: auto auto;
@@ -315,7 +331,7 @@ nav a:hover:after {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-auto-rows: 200px;
         grid-template-areas: "item1"
- "item1";
+ 	"item1";
   }
   .item1 {
     background: black;
@@ -357,9 +373,31 @@ nav a:hover:after {
     display: inline-block;
     vertical-align: middle;
   }
+	.maintext > h1 {
+ 	font-size: 1.7em;
+}
+
+.maintext > p {
+  font-size: .8em;
+}
 }
 
 @media (max-width: 790px) {
+	.section-header {
+  text-align: center;
+  margin: 60px auto 20px auto;
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #DAA03DFF;
+}
+
+.section-header-underline {
+  border: 1px solid #DAA03DFF;
+  width: 3rem;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
   .wrappermain {
     max-width: 80%;
     margin: auto auto;
@@ -412,6 +450,13 @@ nav a:hover:after {
     display: inline-block;
     vertical-align: middle;
   }
+	.maintext > h1 {
+ 	font-size: 1.8em;
+}
+
+.maintext > p {
+  font-size: .9em;
+}
 }
 
 #lightbox {
