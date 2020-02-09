@@ -223,6 +223,20 @@ hr.intro {
  "box2 box2 box2 box7 box7 box7 box7 box7"
  "box2 box2 box2 box7 box7 box7 box7 box7";
 }
+.grid22 {
+  max-width: 80%;
+  margin: 20px auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[8];
+      grid-template-columns: repeat(8, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: auto;
+      grid-template-areas: 
+		  "box3 box3 box3 box3 box3 box3 box3 box3"
+		  "box7 box7 box7 box7 box7 box4 box4 box4"
+ 		  "box7 box7 box7 box7 box7 box4 box4 box4";
+}
 
 .grid2 {
   max-width: 80%;
