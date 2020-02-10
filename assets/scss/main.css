@@ -235,7 +235,68 @@ hr.one {
   border: #DAA03DFF solid 1px;
   margin-bottom: 2em;
 }
-
+@media (max-width: 650px){
+	.main {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    margin: 0 auto;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    background: black;
+    z-index: 0;
+  }
+  .main #content {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    min-height: 24px;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    top: 33%;
+  }
+  .main #content .title {
+    color: #DAA03DFF;
+    font-family: "Open Sans", sans-serif;
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
+  .main #content .title span {
+    font-size: 1rem;
+  }
+	.main #content .title span a{
+    font-size: 3.2rem;
+  }
+  .main #content p {
+    color: #DAA03DFF;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1rem;
+    margin: 1em 4em;
+    padding: 0;
+    border: #DAA03DFF 1px solid;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+  }
+  .main #content p > a {
+    text-decoration: none;
+    color: inherit;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+  }
+  .main #content p > a:hover {
+    color: white;
+  }
+  hr.one {
+    border: #DAA03DFF solid 1px;
+    margin-bottom: 1.5em;
+    width: 50%;
+  }
+}
 @media (max-width: 414px) {
   .main {
     position: absolute;
@@ -268,7 +329,10 @@ hr.one {
     margin-bottom: 0px;
   }
   .main #content .title span {
-    font-size: 2rem;
+    font-size: 1rem;
+  }
+	.main #content .title span a {
+    font-size: 2.5rem;
   }
   .main #content p {
     color: #DAA03DFF;
@@ -296,3 +360,4 @@ hr.one {
   }
 }
 /*# sourceMappingURL=main.css.map */
+
