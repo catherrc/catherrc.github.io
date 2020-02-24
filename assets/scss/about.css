@@ -473,6 +473,20 @@ section:last-child {
   margin-bottom: 3px;
 }
 
+.button {
+  background-color: black;
+  border: 1px solid #DAA03DFF;
+  color: #DAA03DFF;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+	display: block;
+	float: right;
+}
+
 @media all and (min-width: 602px) and (max-width: 800px) {
   #headshot {
     display: none;
@@ -509,6 +523,19 @@ section:last-child {
     -webkit-column-count: 2;
     column-count: 2;
   }
+  .button {
+  background-color: black;
+  border: 1px solid #DAA03DFF;
+  color: #DAA03DFF;
+  padding: 13px 29px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  margin: 30px 100px 4px 100px;
+  cursor: pointer;
+  float: none;
+	  
+  }
 }
 
 @media all and (max-width: 480px) {
@@ -529,6 +556,18 @@ section:last-child {
     line-height: .8em;
     margin-bottom: 4px;
   }
+	.button {
+  background-color: black;
+  border: 1px solid #DAA03DFF;
+  color: #DAA03DFF;
+  padding: 13px 29px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 10px;
+  margin: 30px 100px 4px 100px;
+  cursor: pointer;
+  float: none;
+	
 }
 
 @media print {

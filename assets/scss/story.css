@@ -263,7 +263,7 @@ nav a:hover:after {
   display: block;
 }
 video[poster] {
-	object-fit: fill;
+	object-fit: contain;
 }
 
 @media (max-width: 995px) {
